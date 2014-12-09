@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Le Cadavre Exquis</string>
+    <string-array name="genderSpinnerEntries">
+        <item>Masculin</item>
+        <item>Féminin</item>
+    </string-array>
+    <string-array name="numberSpinnerEntries">
+        <item>Singulier</item>
+        <item>Pluriel</item>
+    </string-array>
+</resources>

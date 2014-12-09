@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:gravity="center"
+	android:padding="40dp">
+	<TextView
+		android:text="Bienvenue dans le jeu du Cadavre Exquis !"
+		android:textSize="20dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="50dp"
+		android:layout_gravity="center_horizontal"
+		android:gravity="center"/>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:orientation="vertical">
+		<Button
+			android:text="Lancer une partie"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginBottom="10dp"
+			android:onClick="launchGame"/>
+		<Button
+			android:text="Phrases enregistrées"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginBottom="10dp"
+			android:onClick="loadSavedSentences"/>
+	</LinearLayout>
+</LinearLayout>
