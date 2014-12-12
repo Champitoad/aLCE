@@ -13,12 +13,10 @@ import java.io.IOException;
 
 public class SentencesManager
 {
-	// Variables
+	/* Variables */
 
 	private ArrayList<String> sentencesArrayList = new ArrayList<String>();
 	private Context context;
-
-	// Constructeur
 
 	SentencesManager(Context activity)
 	{
@@ -26,7 +24,6 @@ public class SentencesManager
 	}
 
 	// Fonction permettant de rafraîchir la liste des phrases
-
 	public void refreshList()
 	{
 		sentencesArrayList.clear();
@@ -50,15 +47,13 @@ public class SentencesManager
 	}
 
 	// Fonction permettant de récupérer la liste des phrases
-
 	public ArrayList<String> getSentences()
 	{
 		refreshList();
 		return sentencesArrayList;
 	}
 
-	// Fonction permettant de sauvegarder la phrase dans un fichier
-
+	// Fonction permettant de sauvegarder une phrase dans un fichier
 	public void add(String sentence, int index)
 	{
 		refreshList();
@@ -87,7 +82,6 @@ public class SentencesManager
 	}
 
 	// Fonction permettant de supprimer une ou plusieurs phrases
-
 	public void remove(ArrayList<String> removedSentences)
 	{
 		refreshList();

@@ -14,91 +14,85 @@ import java.util.ArrayList;
 
 public class EditDialog extends DialogFragment
 {
-	// Attributs
+    private String sentenceToEdit;
+    private int sentenceIndex;
+    private EditText sentenceEditText;
 
-	private String sentenceToEdit;
-	private int sentenceIndex;
-	private EditText sentenceEditText;
-
-	// Fonctions permettant d'implémenter les callbacks de l'EditDialog dans les classes l'utilisant
-
-	public interface EditDialogListener
-	{
-		public void onDialogPositiveClick(DialogFragment dialog);
-		public void onDialogNegativeClick(DialogFragment dialog);
-	}
-
-	EditDialogListener mListener;
-
-	@Override
-    public void onAttach(Activity activity)
+    public interface EditDialogListener
     {
-        super.onAttach(activity);
-        try {
-            mListener = (EditDialogListener)activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString() + " must implement EditDialogListener");
-        }
+        // Fonctions permettant d'implémenter les callbacks de l'EditDialog dans les classes l'utilisant
+        public void onDialogPositiveClick(DialogFragment dialog);
+        public void onDialogNegativeClick(DialogFragment dialog);
     }
 
-	// Fonction lancée à la création de l'EditDialog
+    EditDialogListener mListener;
 
-	public Dialog onCreateDialog(Bundle savedInstanceState)
-	{
-		final SentencesManager sentencesManager = new SentencesManager(getActivity());
-		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+    @Override
+        public void onAttach(Activity activity)
+        {
+            super.onAttach(activity);
+            try {
+                mListener = (EditDialogListener)activity;
+            } catch (ClassCastException e) {
+                throw new ClassCastException(activity.toString() + " must implement EditDialogListener");
+            }
+        }
 
-		sentenceToEdit = getArguments().getString("sentenceToEdit");
-		sentenceIndex = getArguments().getInt("sentenceIndex");
+    // Fonction lancée à la création de l'EditDialog
+    public Dialog onCreateDialog(Bundle savedInstanceState)
+    {
+        final SentencesManager sentencesManager = new SentencesManager(getActivity());
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-		LayoutInflater inflater = getActivity().getLayoutInflater();
-		final View v = inflater.inflate(R.layout.edit_dialog, null);
+        sentenceToEdit = getArguments().getString("sentenceToEdit");
+        sentenceIndex = getArguments().getInt("sentenceIndex");
 
-		sentenceEditText = (EditText)v.findViewById(R.id.sentenceEditText);
-		sentenceEditText.setText(sentenceToEdit);
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        final View v = inflater.inflate(R.layout.edit_dialog, null);
 
-		builder.setView(v);
+        sentenceEditText = (EditText)v.findViewById(R.id.sentenceEditText);
+        sentenceEditText.setText(sentenceToEdit);
 
-		DialogInterface.OnClickListener onClickListener =
-			new DialogInterface.OnClickListener()
-			{
-				public void onClick(DialogInterface dialog, int which)
-				{
-					switch (which) {
-						case DialogInterface.BUTTON_POSITIVE :
-							ArrayList<String> sentenceToEditArrayList = new ArrayList<String>();
-							sentenceToEditArrayList.add(sentenceToEdit);
-							sentencesManager.remove(sentenceToEditArrayList);
-							sentencesManager.add(getEditedSentence(), sentenceIndex);
-							mListener.onDialogPositiveClick(EditDialog.this);
-							break;
-					}
-				}
-			};
-		builder.setPositiveButton("Enregistrer", onClickListener);
-		builder.setNegativeButton("Annuler", onClickListener);
+        builder.setView(v);
 
-		return builder.create();
-	}
+        DialogInterface.OnClickListener onClickListener =
+            new DialogInterface.OnClickListener()
+            {
+                public void onClick(DialogInterface dialog, int which)
+                {
+                    switch (which) {
+                        case DialogInterface.BUTTON_POSITIVE :
+                            ArrayList<String> sentenceToEditArrayList = new ArrayList<String>();
+                            sentenceToEditArrayList.add(sentenceToEdit);
+                            sentencesManager.remove(sentenceToEditArrayList);
+                            sentencesManager.add(getEditedSentence(), sentenceIndex);
+                            mListener.onDialogPositiveClick(EditDialog.this);
+                            break;
+                    }
+                }
+            };
+        builder.setPositiveButton("Enregistrer", onClickListener);
+        builder.setNegativeButton("Annuler", onClickListener);
 
-	// Fonction permettant de créer une nouvelle EditDialog en passant la phrase à modifiée en paramètre, et éventuellement son index
+        return builder.create();
+    }
 
-	static EditDialog newInstance(String sentence, int index)
-	{
-		EditDialog ed = new EditDialog();
-		Bundle args = new Bundle();
+    // Fonction permettant de créer une nouvelle EditDialog en passant la phrase à modifiée en paramètre, et éventuellement son index
+    static EditDialog newInstance(String sentence, int index)
+    {
+        EditDialog ed = new EditDialog();
+        Bundle args = new Bundle();
 
-		args.putString("sentenceToEdit", sentence);
-		args.putInt("sentenceIndex", index);
+        args.putString("sentenceToEdit", sentence);
+        args.putInt("sentenceIndex", index);
 
-		ed.setArguments(args);
-		return ed;
-	}
+        ed.setArguments(args);
+        return ed;
+    }
 
-	// Fonction permettant de récupérer la phrase éditée dans l'EditText
-
-	public String getEditedSentence()
-	{
-		return sentenceEditText.getText().toString();
-	}
+    // Fonction permettant de récupérer la phrase éditée dans l'EditText
+    public String getEditedSentence()
+    {
+        return sentenceEditText.getText().toString();
+    }
 }
