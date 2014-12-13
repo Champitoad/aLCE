@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="alce-logo.svg"
+   inkscape:export-filename="/home/pablo/Programmation/java/aLCE/res/drawable-xhdpi/ic_launcher.png"
+   inkscape:export-xdpi="35.546661"
+   inkscape:export-ydpi="35.546661">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3980">
+      <stop
+         style="stop-color:#a225a3;stop-opacity:1"
+         offset="0"
+         id="stop3982" />
+      <stop
+         style="stop-color:#cb62cb;stop-opacity:1"
+         offset="1"
+         id="stop3984" />
+    </linearGradient>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter3874">
+      <feFlood
+         flood-opacity="0.6"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3876" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3878" />
+      <feGaussianBlur
+         in="composite"
+         stdDeviation="4"
+         result="blur"
+         id="feGaussianBlur3880" />
+      <feOffset
+         dx="-2.58127e-15"
+         dy="5"
+         result="offset"
+         id="feOffset3882" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3884" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter3936">
+      <feFlood
+         flood-opacity="0.75"
+         flood-color="rgb(51,0,76)"
+         result="flood"
+         id="feFlood3938" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3940" />
+      <feGaussianBlur
+         in="composite"
+         stdDeviation="4"
+         result="blur"
+         id="feGaussianBlur3942" />
+      <feOffset
+         dx="-2.58127e-15"
+         dy="3"
+         result="offset"
+         id="feOffset3944" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3946" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3980"
+       id="linearGradient3988"
+       x1="373.03552"
+       y1="497.23367"
+       x2="371.81458"
+       y2="247.23366"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3980"
+       id="linearGradient4026"
+       gradientUnits="userSpaceOnUse"
+       x1="373.03552"
+       y1="497.23367"
+       x2="371.81458"
+       y2="247.23366" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="431.76968"
+     inkscape:cy="603.68932"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1022"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4017"
+       transform="matrix(0.95574197,0,0,0.95574197,27.87577,79.658775)"
+       inkscape:export-filename="/home/pablo/Programmation/java/aLCE/res/drawable-ldpi/ic_launcher.png"
+       inkscape:export-xdpi="12.708462"
+       inkscape:export-ydpi="12.708462">
+      <rect
+         inkscape:export-ydpi="34.433022"
+         inkscape:export-xdpi="34.433022"
+         inkscape:export-filename="/home/pablo/Programmation/java/aLCE/res/drawable-xhdpi/ic_launcher.png"
+         ry="68.571442"
+         y="266.9686"
+         x="264.65997"
+         height="209.10158"
+         width="209.10158"
+         id="rect2985"
+         style="fill:url(#linearGradient4026);fill-opacity:1;stroke:none;filter:url(#filter3874)"
+         transform="matrix(1.0606702,0,0,1.0606702,-16.05696,-28.883248)" />
+      <g
+         inkscape:export-ydpi="34.433022"
+         inkscape:export-xdpi="34.433022"
+         inkscape:export-filename="/home/pablo/Programmation/java/aLCE/res/drawable-xhdpi/ic_launcher.png"
+         style="filter:url(#filter3936)"
+         transform="matrix(0.92488286,0,0,0.92488286,35.903737,9.4510615)"
+         id="g3779">
+        <text
+           transform="scale(1.029431,0.97141042)"
+           xml:space="preserve"
+           style="font-size:173.37049866px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Noto Sans;-inkscape-font-specification:Noto Sans"
+           x="346.42938"
+           y="452.99268"
+           id="text3775"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3777"
+             x="346.42938"
+             y="452.99268"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono">!</tspan></text>
+        <g
+           transform="matrix(1.3712305,0,0,1.0450313,-119.60046,-6.4367105)"
+           id="g3786">
+          <path
+             sodipodi:nodetypes="cccccc"
+             inkscape:connector-curvature="0"
+             id="path3773"
+             d="m 322.19234,306.82327 0,107.74048 15.59874,27.01781 15.69104,-27.17769 0,-107.50337 z"
+             style="fill:none;stroke:#ffffff;stroke-width:10.8386364;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             sodipodi:nodetypes="ccccc"
+             style="fill:none;stroke:#ffffff;stroke-width:9.93541622;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m 323.69962,404.07881 7.74664,-7.14285 6.77831,6.77257 6.58464,-6.594 7.16564,6.60714"
+             id="path3784"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
