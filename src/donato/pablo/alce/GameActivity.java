@@ -44,9 +44,7 @@ public class GameActivity extends Activity implements EditDialog.EditDialogListe
     private String[] words = new String[6];
     private String currentWord;
     private int currentWordType = SUJET;
-    private boolean gameFinished = false;
 
-    private Button previousButton;
     private Button nextButton;
     private TextView wordTypeTextView;
     private TextView genderNumberTextView;
@@ -83,7 +81,6 @@ public class GameActivity extends Activity implements EditDialog.EditDialogListe
             exitDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Oui", exitOnClickListener);
             exitDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Non", exitOnClickListener);
 
-            previousButton = (Button)findViewById(R.id.previousButton);
             nextButton = (Button)findViewById(R.id.nextButton);
             wordTypeTextView = (TextView)findViewById(R.id.wordTypeTextView);
             genderNumberTextView = (TextView)findViewById(R.id.genderNumberTextView);
@@ -126,7 +123,6 @@ public class GameActivity extends Activity implements EditDialog.EditDialogListe
         if (currentWordType == SUJET) {
             genderNumberLayout.setVisibility(View.VISIBLE);
             genderNumberTextView.setVisibility(View.GONE);
-            previousButton.setEnabled(false);
         }
         else {
             genderNumberLayout.setVisibility(View.GONE);
@@ -146,11 +142,6 @@ public class GameActivity extends Activity implements EditDialog.EditDialogListe
 
             if (currentWordType == CC) {
                 nextButton.setText("Terminer");
-            }
-            else {
-                previousButton.setEnabled(true);
-                nextButton.setEnabled(true);
-                nextButton.setText("Suivant");
             }
         }
     }
@@ -203,7 +194,6 @@ public class GameActivity extends Activity implements EditDialog.EditDialogListe
                 public void onDismiss(DialogInterface dialog)
                 {
                     sentence = "";
-                    gameFinished = true;
                     refreshView(currentWordType);
                 }
             });
@@ -216,17 +206,8 @@ public class GameActivity extends Activity implements EditDialog.EditDialogListe
         }
     }
 
-    // Callback du bouton "Précédent"
-    public void previous(View view)
-    {
-        currentWord = wordEditText.getText().toString();
-        words[currentWordType] = currentWord;
-        currentWordType--;
-        refreshView(currentWordType);
-    }
+    /* Callbacks de l'EditDialog */
 
-
-    // Callbacks de l'EditDialog
     @Override
         public void onDialogPositiveClick(DialogFragment dialog)
         {

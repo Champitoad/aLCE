@@ -22,7 +22,7 @@
             android:inputType="textVisiblePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="35dp"/>
         <LinearLayout
             android:id="@+id/genderNumberLayout"
             android:layout_width="match_parent"
@@ -51,25 +51,12 @@
             android:gravity="center"
             android:visibility="gone"/>
     </LinearLayout>
-    <LinearLayout
+    <Button
+        android:id="@+id/nextButton"
+        android:text="Suivant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="70dp"
-        android:layout_alignParentBottom="true">
-        <Button
-            android:id="@+id/previousButton"
-            android:text="Précédent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="50"
-            android:onClick="previous"/>
-        <Button
-            android:id="@+id/nextButton"
-            android:text="Suivant"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="50"
-            android:onClick="next"/>
-    </LinearLayout>
+        android:onClick="next"/>
 </RelativeLayout>
