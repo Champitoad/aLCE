@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1783617"
-     inkscape:cx="-10.076022"
-     inkscape:cy="71.203669"
+     inkscape:zoom="1.6664551"
+     inkscape:cx="201.80936"
+     inkscape:cy="40.089655"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -119,6 +119,38 @@
          operator="over"
          result="composite2"
          id="feComposite3854" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter3052">
+      <feFlood
+         flood-opacity="0.2"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3054" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3056" />
+      <feGaussianBlur
+         in="composite"
+         stdDeviation="6"
+         result="blur"
+         id="feGaussianBlur3058" />
+      <feOffset
+         dx="0"
+         dy="6"
+         result="offset"
+         id="feOffset3060" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3062" />
     </filter>
   </defs>
   <metadata
@@ -332,7 +364,8 @@
          transform="matrix(1.067552,0,0,1.067552,-264.04336,513.76406)"
          inkscape:export-filename="/home/pablo/Programmation/java/aLCE/res/drawable-xhdpi/ic_launcher.png"
          inkscape:export-xdpi="34.433022"
-         inkscape:export-ydpi="34.433022">
+         inkscape:export-ydpi="34.433022"
+         style="filter:url(#filter3052)">
         <text
            sodipodi:linespacing="125%"
            id="text3775"
