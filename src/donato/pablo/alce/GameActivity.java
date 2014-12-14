@@ -33,7 +33,7 @@ public class GameActivity extends Activity implements EditDialog.EditDialogListe
         "mange",
         "sciemment",
         "une cuillère",
-        "dans le confessional"
+        "dans le confessionnal"
     };
 
     /* Variables */
